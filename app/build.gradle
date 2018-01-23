@@ -14,7 +14,7 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ moduleName : project.getName() ]
+                arguments = [ "moduleName" : project.name]
             }
         }
     }
@@ -37,4 +37,5 @@ dependencies {
 
     compile project(':annotation')
     annotationProcessor project(':routercompiler')
+    compile project(path: ':routerlib')
 }
